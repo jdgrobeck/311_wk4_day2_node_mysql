@@ -95,3 +95,28 @@ Write a SQL statement to DELETE FROM users WHERE first_name = req param first_na
 ## Summary
 
 If all went according to plan we now have a full CRUD API that selects, inserts, updates and deletes from a SQL database. Great job! Take the time to start expanding on these concepts. 
+
+
+METHOD DESCRIPTIONS IN ENGLISH
+
+Document routes and what they're doing in English
+
+GET /users
+    This method returns all information about the user including the user's id from the users table, first_name, last_name, user_id from the usersAddress and usersContact tables, street address, city, state, county, zip, phone1, phone 2 and email. 
+
+
+GET /users/:id
+    This method returns the same information as GET /users. However, you specify the route with a user's id from the users table. The only difference is the user's id from the users table is returned as "user_id" while the user_id from the usersAddress and usersContact tables is "id".
+
+POST /users
+    This method creates a new user. You'll have to enter a first name, last name, street address, city, county, state, zip, phone1, phone 2 and email. Since the id's are auto incremented for each table, the new user will automatically be assigned the next sequential id.
+
+PUT /users/:id
+    This method updates information of an existing user. For example, if you wanted to change all the information for user id 1, James Butt, you would use this method. To do so, you would have to include the user's id in the route in Postman.
+
+DEELETE /users/:first_name
+    This method deletes a user by his or her first name. Simply put the first name of the user you want to delete in your route. To delete James Butt, the route would be http://localhost:4001/users/James.
+
+
+
+For all methods, you should test the routes in Postman.
