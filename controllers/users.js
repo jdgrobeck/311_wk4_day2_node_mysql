@@ -235,6 +235,8 @@ const deleteUserByFirstName = (req, res) => {
   })
 }
 
+
+
 module.exports = {
   getAllUsers,
   getUserById,
